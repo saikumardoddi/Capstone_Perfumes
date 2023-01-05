@@ -1,0 +1,44 @@
+create database Shop_Pro;
+use Shop_Pro;
+
+create table Customer(Customer_id int(10) auto_increment primary key,Customer_name varchar(30) NOT NULL,
+Customer_password varchar(20) NOT NULL ,Customer_email varchar(20) unique);
+
+create table Adminstrator(Admin_id int(10) auto_increment primary key,Admin_name varchar(30) NOT NULL,
+Admin_password varchar(20) NOT NULL ,Admin_email varchar(20) unique);
+
+create table Laptop(Laptop_id int(10) auto_increment primary key, Laptop_name varchar(30) NOT NULL,
+Laptop_type varchar(30) NOT NULL,Laptop_description varchar(255) NOT NULL,
+Laptop_price int(10) NOT NULL,Laptop_Image blob,Customer_id int(10) NOT NULL,
+Foreign key(Customer_id) references Customer(Customer_id));
+
+create table Cart(Cart_id int(10) auto_increment primary key,Laptop_id int(10) NOT NULL,
+Customer_id int(10) NOT NULL,Foreign key(Customer_id) references Customer(Customer_id),
+Foreign key(Laptop_id) references Laptop(Laptop_id));
+
+create table Coupon(Coupon_id int(10) auto_increment primary key,
+Coupon_code int(10) NOT NULL,Coupon_discount int(10) NOT NULL,Expiring_date date,
+Customer_id int(10) NOT NULL,Foreign key(Customer_id) references Customer(Customer_id));
+
+create table Orders(Order_id int(10) auto_increment primary key,Order_Quantity int(10) NOT NULL,
+Order_Price int(10) NOT NULL,Order_Discount int(10) NOT NULL,Order_Shippingdate date,
+Customer_id int(10) NOT NULL,Laptop_id int(10) NOT NULL,Foreign key(Customer_id) references Customer(Customer_id),
+Foreign key(Laptop_id) references Laptop(Laptop_id));
+
+create table Payment_Type(Payment_Type_id int(10) auto_increment primary key,Payment_Type varchar(30) NOT NULL);
+
+create table Payment(Payment_id int(10) auto_increment primary key,Laptop_id int(20) ,Foreign key(Payment_type_id) references Payment_Type(Payment_type_id),
+Amount double,Payment_type_id int(20),Foreign key(Laptop_id) references Laptop(Laptop_id));
+
+
+create table Shipping_Details(Shipping_id int(10) auto_increment primary key,Delivery_date date,
+Delivery_Address varchar(255) NOT NULL,Order_id int(10),payment_id int(10),Foreign key(Order_id) references Orders(Order_id),
+Foreign key(Payment_id) references Payment(Payment_id));
+
+create table address(address_id int(10) auto_increment primary key, City varchar(20) NOT NULL,
+Pincode varchar(20) NOT NULL,State varchar(20) NOT NULL,Country varchar(20) NOT NULL,Customer_id int(10),
+Foreign key(Customer_id) references Customer(Customer_id));
+
+create table Events(Event_id int(10) auto_increment primary key,
+Event_name varchar(20) NOT NULL,Expiry_start_date date,Event_End_date date,
+Customer_id int(10) NOT NULL,Foreign key(Customer_id) references Customer(Customer_id));
