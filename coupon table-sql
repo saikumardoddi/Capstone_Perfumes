@@ -1,0 +1,9 @@
+CREATE TABLE `coupon_details` (
+  `coupon_id` int NOT NULL,
+  `coupon_code` varchar(10) DEFAULT NULL,
+  `coupon_discount` varchar(20) DEFAULT NULL,
+  `coupon_start_date` date DEFAULT NULL,
+  `coupon_end_date` date DEFAULT NULL,
+  PRIMARY KEY (`coupon_id`)
+);
+
