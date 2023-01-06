@@ -1,0 +1,324 @@
+<html>
+<head><title>DOC</title></head>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  margin: 0 auto;
+  background: #EBEBEB;
+  padding: 20px 30px;
+  border-radius: 8px; }
+
+h1 {
+  text-align: center; }
+
+.form-container {
+  width: 100%;
+  margin: 10px auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.flex-item {
+  width: 40%;
+  height: 100%; }
+
+label {
+  display: block;
+  font-size: 20px; }
+
+.field-container {
+  padding: 5px 10px;
+  margin: 10px 0 10px; }
+
+.required {
+  color: red;
+  font-size: 1.1em; }
+
+.field-container > input, .passkey-box > input {
+  width: 100%;
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 18px;
+  margin: 5px 0 3px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black; }
+
+.passkey-box {
+  position: relative; }
+
+.passkey-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.2em; }
+
+.field-container > input:focus, .passkey-box > input:focus {
+  border-bottom: 2px solid dodgerBlue; }
+
+.error-messg {
+  display: block;
+  color: red;
+  font-weight: 300; }
+
+.center {
+  text-align: center; }
+
+input[type='submit'] {
+  padding: 10px 30px;
+  font-size: 1.2em;
+  background: dodgerBlue;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  border-radius: 3px; }
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    width: 100%;
+    padding: 100px 10px 30px;
+    border-radius: 0; }
+
+  h1 {
+    margin-top: 50px; }
+
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .flex-item {
+    width: 100%; } }
+@media screen and (min-width: 576px) {
+  .wrapper {
+    width: 80%;
+    padding: 100px 10px 30px;
+    border-radius: 0; }
+
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .flex-item {
+    width: 100%; } }
+@media screen and (min-width: 662px) {
+  .wrapper {
+    width: 70%;
+    padding: 100px 10px 30px;
+    border-radius: 0; }
+
+  .flex-item {
+    width: 90%;
+    height: 100%; } }
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 80%;
+    padding: 30px 10px;
+    border-radius: 0; }
+
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+
+  .flex-item {
+    width: 40%;
+    height: 100%; } }
+@media screen and (min-width: 992px) {
+  .wrapper {
+    max-width: 876px;
+    padding: 30px 10px;
+    border-radius: 0; } }
+
+</style>
+<body>
+<div class="wrapper">
+    <h1>Registration form</h1>
+
+    <!--form container-->
+    <div class="form-container">
+    <form action="" method="post">
+        <!--flexbox and it's items-->
+        <div class="flex">
+            <div class="flex-item">
+            <!--full name field-->
+                <div class="field-container">
+                    <label for="full-name">Full Name: <span class="required">*</span></label>
+                    <input type="text" name="full-name"   pattern="^([a-zA-Z]{2,} ?)+$" id="full-name" placeholder="Your full name" required="required" />
+                    <span class="error-messg"></span>              
+                </div>
+            
+             <!--email field-->
+                <div class="field-container">
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Your email" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+
+             <!--confirm email field-->
+                <div class="field-container">
+                    <label for="confirm-email">Confirm email: <span class="required">*</span></label>
+                    <input type="email" name="confirm-email" id="confirm-email" placeholder="Re-enter email" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+                
+            </div>
+            <div class="flex-item">
+                <!--contact no field-->
+                <div class="field-container">
+                    <label for="contact-no">Contact no.: <span class="required">*</span></label>
+                    <input type="tel" name="contact-no" pattern=[0-9]{10} id="contact-no" placeholder="Mobile number" required="required" />
+                    <span class="error-messg"></span>
+                </div>
+
+                <!--password field-->
+                <div class="field-container">
+                    <label for="passkey">Password: <span class="required">*</span></label>
+                    <div class="passkey-box">
+                    <input type="password" name="passkey" id="passkey" class="passkey" placeholder="Password" required="required" />
+                    <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i>  </span>
+                    </div>
+                    <span class="error-messg"></span>
+                </div>
+
+                <!--confirm password field-->
+                <div class="field-container">
+                    <label for="confirm-passkey">Confirm password: <span class="required">*</span></label>
+                    <div class="passkey-box">
+                    <input type="password" name="confirm-passkey" class="passkey" id="confirm-passkey" placeholder="Re-enter password" required="required" />
+                    <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i></span>
+                    </div>
+                    <span class="error-messg"></span>
+                </div>
+                
+            </div>
+        </div>
+        <!--Submit button-->
+        <div class="center"><input type="submit" value="Register"></div>
+    </form>
+    </div>
+
+<script>
+document.querySelector('#full-name').addEventListener('blur',(event)=>{
+    let err = document.querySelector(".error-messg");
+    err.innerText = "";
+    try{
+        //if field empty
+        if(event.target.validity.valueMissing)
+            throw event.target.validationMessage;
+        
+        else if(event.target.validity.patternMismatch){
+            //event.target.setCustomValidity("Enter A valid name");
+            throw "Please enter a valid name!";
+        }
+
+        else{
+            event.target.style.borderBottomColor = 'green';
+            err.innerText = "";
+        }
+    }
+
+    catch(messg){
+        err.innerText = messg;
+    }
+    
+});
+
+
+//to validate email
+document.querySelector('#email').addEventListener('blur',(event)=>{
+    validateEmail(event);
+});
+
+//to validate confirm email
+document.querySelector('#confirm-email').addEventListener('blur',(event)=>{
+    validateEmail(event);
+    validateConfirmation(document.querySelector('#email'),event.target);
+});
+
+
+//function for email and confirm email validation
+function validateEmail(event){
+    let error = event.target.nextElementSibling;
+    error.innerText = "";
+    try{
+        
+        if(event.target.validity.valueMissing)
+            throw event.target.validationMessage;
+
+        else if(!event.target.validity.valid || event.target.value.slice(-4)!='.com')
+            throw "Please enter a valid email.";
+
+        else
+            event.target.style.borderBottom = '2px solid green';
+         
+    }
+
+    
+    catch(messg){
+        error.innerText = messg;
+    }
+
+}
+
+//for validating confirm 
+function validateConfirmation(el,cEl){
+    if(el.value == cEl.value){
+        cEl.nextElementSibling.innerText = "";
+        document.querySelector('[type="submit"]').removeAttribute('disabled');
+    }
+
+    else{
+        cEl.nextElementSibling.innerText = "Confirm email not mached!";
+        document.querySelector('[type="submit"]').setAttribute('disabled',"disabled");
+    }
+}
+
+</script>
+
+</body>
+
+</div>
