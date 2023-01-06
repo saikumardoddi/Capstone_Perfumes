@@ -1,0 +1,13 @@
+CREATE TABLE `payment_opt` (
+  `customer_id` int NOT NULL,
+  `mobile_number` int NOT NULL,
+  `transaction_date` date NOT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `email_id` varchar(20) DEFAULT NULL,
+  `city` varchar(15) DEFAULT NULL,
+  `state` varchar(20) DEFAULT NULL,
+  `pincode` int NOT NULL,
+  `payment_optcol` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`customer_id`),
+  CONSTRAINT `customer_id` FOREIGN KEY (`customer_id`) REFERENCES `user_reg` (`customer_id`)
+);
