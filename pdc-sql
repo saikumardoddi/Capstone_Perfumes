@@ -1,0 +1,6 @@
+CREATE TABLE `product_category` (
+  `product_category` int NOT NULL,
+  `category_name` varchar(25) NOT NULL,
+  `category_description` varchar(256) NOT NULL,
+  PRIMARY KEY (`product_category`)
+);
