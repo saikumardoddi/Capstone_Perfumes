@@ -1,0 +1,14 @@
+CREATE TABLE `user_reg` (
+  `customer_id` int NOT NULL,
+  `first_name` varchar(10) NOT NULL,
+  `middle_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `gender` varchar(12) NOT NULL,
+  `mobile_num` int NOT NULL,
+  `email_id` varchar(25) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  PRIMARY KEY (`customer_id`),
+  UNIQUE KEY `password_UNIQUE` (`password`),
+  UNIQUE KEY `email_id_UNIQUE` (`email_id`),
+  UNIQUE KEY `customer_id_UNIQUE` (`customer_id`)
+);
