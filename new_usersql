@@ -1,0 +1,10 @@
+SELECT `user_reg`.`user_id`,
+    `user_reg`.`first_name`,
+    `user_reg`.`middle_name`,
+    `user_reg`.`last_name`,
+    `user_reg`.`gender`,
+    `user_reg`.`mobile_num`,
+    `user_reg`.`email_id`,
+    `user_reg`.`password`,
+    `user_reg`.`type_id`
+FROM `aroma_perfumes`.`user_reg`;
