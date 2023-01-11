@@ -1,0 +1,7 @@
+SELECT `coupon_details`.`coupon_id`,
+    `coupon_details`.`coupon_code`,
+    `coupon_details`.`coupon_discount`,
+    `coupon_details`.`coupon_start_date`,
+    `coupon_details`.`coupon_end_date`,
+    `coupon_details`.`user_id`
+FROM `aroma_perfumes`.`coupon_details`;
