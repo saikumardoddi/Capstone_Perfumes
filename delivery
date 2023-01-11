@@ -1,0 +1,4 @@
+SELECT `delivery`.`delivery_id`,
+    `delivery`.`user_id`,
+    `delivery`.`date`
+FROM `aroma_perfumes`.`delivery`;
