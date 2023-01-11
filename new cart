@@ -1,0 +1,5 @@
+SELECT `cart`.`cart_id`,
+    `cart`.`product_id`,
+    `cart`.`user_id`,
+    `cart`.`count`
+FROM `aroma_perfumes`.`cart`;
