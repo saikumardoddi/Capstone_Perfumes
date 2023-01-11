@@ -1,0 +1,4 @@
+SELECT `category`.`caregory_id`,
+    `category`.`category_name`,
+    `category`.`category_description`
+FROM `aroma_perfumes`.`category`;
