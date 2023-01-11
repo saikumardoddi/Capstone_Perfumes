@@ -1,0 +1,6 @@
+SELECT `transaction`.`transaction_id`,
+    `transaction`.`transaction_type`,
+    `transaction`.`description`,
+    `transaction`.`date`,
+    `transaction`.`user_id`
+FROM `aroma_perfumes`.`transaction`;
