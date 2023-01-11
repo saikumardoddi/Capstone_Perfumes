@@ -15,7 +15,7 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(A.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(Z.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -285,6 +285,16 @@ ul li a:hover{
     color: #ff7200;
 }
 
+.fot{
+color:blue;
+font-size:20px;
+background-color:red;
+padding:5px;
+width:270px;
+margin:0px 10px 0px 10px;
+
+}
+
 </style>
 </head>
 <body>
@@ -303,7 +313,7 @@ ul li a:hover{
 
                     <li><a href="#">FRAGRANCES</a></li>
                     <li><a href="#">CONTACT</a></li>
-                    <li><a href="Login.html" target="_blank">LOGIN</a></li>
+                    <li><a href="Login.html" target="">LOGIN</a></li>
                     
                 </ul>
             </div>
@@ -320,7 +330,7 @@ ul li a:hover{
              "Your Hand Bag may Not be remembered, But your Perfume will."-Oliver Cred 
                <br>"Perfume is a story in odour, sometimes poetry in memory."-Jean-Claude Ellena</p>
 
-                <button class="cn"><a href="#">JOIN US</a></button>
+     
 <!--
 
                 <div class="form">
@@ -347,20 +357,15 @@ ul li a:hover{
         </div>
     </div>
  <!--   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>  -->
+<script>
+const year=document.getElementById("year");
+year.textContent=newDate().getFullYear();
+
+</script>
+
 </body>
+
 </html>
-<footer>
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-</footer>
+<marquee><footer class="fot">
+<p>Copyright &copy <span id="year"></span>Aroma_Cosmetics</p>
+</footer></marquee>
