@@ -1,0 +1,6 @@
+SELECT `order_details`.`order_id`,
+    `order_details`.`user_id`,
+    `order_details`.`coupon_id`,
+    `order_details`.`date`,
+    `order_details`.`cart_id`
+FROM `aroma_perfumes`.`order_details`;
