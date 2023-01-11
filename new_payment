@@ -1,0 +1,7 @@
+SELECT `payment`.`payment_id`,
+    `payment`.`product_id`,
+    `payment`.`product_count`,
+    `payment`.`total_amount`,
+    `payment`.`date`,
+    `payment`.`user_id`
+FROM `aroma_perfumes`.`payment`;
