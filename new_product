@@ -1,0 +1,9 @@
+SELECT `product`.`product_id`,
+    `product`.`product_name`,
+    `product`.`product_imagel`,
+    `product`.`product_price`,
+    `product`.`product_desc`,
+    `product`.`product_count`,
+    `product`.`product_category`,
+    `product`.`user_id`
+FROM `aroma_perfumes`.`product`;
