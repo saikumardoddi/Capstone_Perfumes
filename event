@@ -1,0 +1,6 @@
+SELECT `event`.`event_id`,
+    `event`.`event_name`,
+    `event`.`event_start_date`,
+    `event`.`event_end_date`,
+    `event`.`user_id`
+FROM `aroma_perfumes`.`event`;
